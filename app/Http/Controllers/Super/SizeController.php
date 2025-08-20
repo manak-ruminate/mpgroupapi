@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Http\Controllers\Super;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Size;
+class SizeController extends Controller
+{
+    public function index()
+    {
+        $data = Size::where('is_active',1)->get();
+        return response(['data' => $data]);
+    }
+
+    public function add(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+         ]);
+
+        $data = new  Size();
+        $data->name = $request->get('name');
+       
+        $data->save();
+        return response(['msg' => 'size created succesfully']);
+    }
+    public function update(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'id' => 'required',
+        ]);
+
+       $data =  Size::find($request->get('id'));
+        $data->name = $request->get('name');
+       
+        $data->save();
+        return response(['msg' => 'size update succesfully']);
+    }
+    public function delete($id)
+    {
+       
+        $data = Size::find($id);
+        if ($data->delete()) {
+            return response(['msg' => 'size delete successfully']);
+        }
+    }
+}

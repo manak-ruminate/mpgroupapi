@@ -1,0 +1,4 @@
+[26-Sep-2024 12:30:04 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\UserController as UserController because the name is already in use in /home/risappco/inventorymanagment-api.risapp.co.in/routes/api.php on line 18
+[26-Sep-2024 12:30:34 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\UserController as UserController because the name is already in use in /home/risappco/inventorymanagment-api.risapp.co.in/routes/api.php on line 18
+[26-Sep-2024 12:31:04 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\UserController as UserController because the name is already in use in /home/risappco/inventorymanagment-api.risapp.co.in/routes/api.php on line 18
+[26-Sep-2024 12:32:05 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\UserController as UserController because the name is already in use in /home/risappco/inventorymanagment-api.risapp.co.in/routes/api.php on line 18
